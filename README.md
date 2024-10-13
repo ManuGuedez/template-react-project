@@ -23,3 +23,11 @@ createRoot(document.getElementById("root")).render(
   </Router>  
 );
 ```
+
+In the App.jsx file, add the following import: `import { Routes, Route, Navigate } from "react-router-dom";`
+
+Then in any other files you want to use the routing tools on, simply import links like: `useNavigate` and `useParams`
+
+
+To have a default route once a user opens the app, use the following line: 
+`<Route path="/*" element={<Navigate replace to="/welcome" />} />`
