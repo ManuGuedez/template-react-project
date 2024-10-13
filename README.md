@@ -15,16 +15,10 @@ Add to the main.jsx file the following import: `import { BrowserRouter as Router
 And rewrite the code as shown:
 ```
 ReactDOM.createRoot(document.getElementById("root")).render(
-
   <Router>
-    
-    <React.StrictMode>
-    
-      <App />
-      
-    </React.StrictMode>
-    
-  </Router>
-  
+    <React.StrictMode>    
+      <App />      
+    </React.StrictMode>    
+  </Router>  
 );
 ```
