@@ -13,7 +13,8 @@ It is also necessary to add the following import in the main.jsx file `import 'b
 Run the command "npm install react-router-dom".
 Add to the main.jsx file the following import: `import { BrowserRouter as Router } from "react-router-dom";`
 And rewrite the code as shown:
-`ReactDOM.createRoot(document.getElementById("root")).render(
+`
+ReactDOM.createRoot(document.getElementById("root")).render(
 
   <Router>
     
@@ -25,4 +26,5 @@ And rewrite the code as shown:
     
   </Router>
   
-);`
+);
+`
