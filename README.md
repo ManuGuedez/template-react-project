@@ -14,9 +14,15 @@ Run the command "npm install react-router-dom".
 Add to the main.jsx file the following import: `import { BrowserRouter as Router } from "react-router-dom";`
 And rewrite the code as shown:
 `ReactDOM.createRoot(document.getElementById("root")).render(
+
   <Router>
+    
     <React.StrictMode>
+    
       <App />
+      
     </React.StrictMode>
+    
   </Router>
+  
 );`
