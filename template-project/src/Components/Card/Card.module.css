@@ -1,0 +1,22 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 3px solid #000;
+    border-radius: 15px;
+    min-width: 200px;
+    height: 250px;
+    align-self: center;
+    gap:20px;
+    background-color: rgb(213, 213, 213);
+    border-color: rgb(213, 213, 213);
+}
+
+#title {
+    text-align: center;
+}
+
+#button {
+    width: 80%;
+    align-self: center;
+}

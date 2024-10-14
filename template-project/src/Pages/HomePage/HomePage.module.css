@@ -1,0 +1,28 @@
+.titleContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px 0px 10px 0px;
+}
+
+#buttonAddItem {
+    background-color: skyblue;
+    border-color: skyblue;
+}
+
+.cardsContainer {
+    width: 100%;
+    height: 100hv;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+}
