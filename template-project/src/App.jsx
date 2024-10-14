@@ -55,7 +55,7 @@ function App() {
     });
   }, []);
 
-  const addItem = async (title, description, players, categories) => {
+  const addItemHandler = async (title, description, players, categories) => {
     const newItem = {
       title: title,
       description: description,
@@ -66,7 +66,7 @@ function App() {
      setItems([...items, newItemWithId]);
   };
 
-  const deleteItem = (item) => {
+  const deleteItemHandler = (item) => {
 
     // manejo a promesa para poder eliminar de la ui solo si se eliminó de la db
     deleteItemAW( item ).then(() => {
@@ -78,7 +78,7 @@ function App() {
   return (
     <Routes>
       <Route path="/*" element={<Navigate replace to="/home" />} />
-      <Route path="/home" element={<HomePage items={items} addItem={addItem} deleteItem={deleteItem}/>} />
+      <Route path="/home" element={<HomePage items={items} addItem={addItemHandler} deleteItem={deleteItemHandler}/>} />
       <Route path="/anotherPage/:itemId" element={<AnotherPage items={items}/>} />
     
     </Routes>

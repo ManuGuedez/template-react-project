@@ -1,12 +1,31 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import classes from "./AnotherPage.module.css";
 import { useParams, useNavigate } from "react-router-dom";
 
-function AnotherPage({ items }) {
+function AnotherPage() {
   let { itemId } = useParams();
   const navigate = useNavigate();
-  console.log(itemId);
-  const currentItem = items.find((item) => item.id === itemId);
+  const [currentItem, setCurrentItem] = useState([]);
+  const url = "http://localhost:3000/items";
+
+
+  async function fetchDataAW() {
+    try {
+      const response = await fetch(url + `/${itemId}`, { method: "GET" });
+      const data = await response.json(); // extract JSON from response
+      return data;
+    } catch (error) {
+      console.log("Error fetching data: ", error);
+    }
+  }
+
+  useEffect(() => {
+    const itemPromise = fetchDataAW();
+    itemPromise.then((item) => {
+      setCurrentItem(item);
+    })
+  }, []);
+
 
   const handleGoHomeBtn = () => {
     navigate("/home");
